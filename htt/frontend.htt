@@ -1,0 +1,6 @@
+<a name="{anchor}"></a>
+<div class="feedback">
+	{remark}
+	{feedbacks}
+  <div class="feedback_intro">{intro}</div>
+</div>
