@@ -56,12 +56,16 @@
  * 0.31 - 07.09.2010
  * fixed:         Datetime format in NL.php
  * fixed:         deprecated functions in class.parser.php
+ * 
+ * 0.32 - 27.11.2010
+ * added:         IT.php, many thanks to Alberto Donzelli für translation
+ * 
  */
 
 $module_directory 	= 'feedback';
 $module_name 			  = 'Feedback';
 $module_function 		= 'page';
-$module_version 		= '0.31';
+$module_version 		= '0.32';
 $module_platform 		= '2.6.x';
 
 $module_author 		   = 'Ralf Hertsch - rh@phpmanufaktur.de';
