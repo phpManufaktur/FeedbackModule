@@ -59,13 +59,16 @@
  * 
  * 0.32 - 27.11.2010
  * added:         IT.php, many thanks to Alberto Donzelli für translation
+ *
+ * 0.33 - xxx
+ * updated:       NO.php by Odd Egil Hansen
  * 
  */
 
 $module_directory 	= 'feedback';
 $module_name 			  = 'Feedback';
 $module_function 		= 'page';
-$module_version 		= '0.32';
+$module_version 		= '0.33';
 $module_platform 		= '2.6.x';
 
 $module_author 		   = 'Ralf Hertsch - rh@phpmanufaktur.de';
