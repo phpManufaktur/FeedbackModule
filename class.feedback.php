@@ -867,7 +867,7 @@ class feedback_modify_dlg extends sql_feedback_options {
   function showDialog($showHelp=false) {
     $parser = new templateParser();
     $parser->add('header', fb_backend_header);
-    $parser->add('form_action', WB_URL. '/admin/pages/modify.php?page_id='.$this->page_id);
+    $parser->add('form_action', ADMIN_URL. '/pages/modify.php?page_id='.$this->page_id);
     $parser->add('page_id', $this->page_id);
     $parser->add('section_id', $this->section_id);
     if ($showHelp) {

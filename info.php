@@ -62,6 +62,7 @@
  *
  * 0.33 - xxx
  * updated:       NO.php by Odd Egil Hansen
+ * fixed:         usage of static backend link instead of ADMIN_URL
  * 
  */
 
