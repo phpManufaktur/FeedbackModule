@@ -1,0 +1,77 @@
+### FeedbackModule
+2007-2012 by phpManufaktur, Berlin (Germany)
+ralf.hertsch@phpmanufaktur.de
+http://phpmanufaktur.de
+
+Release 0.34 - 2012-06-18
+
+* changed WebsiteBaker version checking
+* added CHANGELOG
+* added README.md
+* changed license from GNU GPL to MIT
+* added LICENSE
+* updated all header informations
+* fixed some typos
+
+Release 0.33 - 2011-02-12
+
+* updated NO.php by Odd Egil Hansen
+* fixed usage of static backend link instead of ADMIN_URL
+
+Release 0.32 - 2010-11-27
+
+* added IT.php, many thanks to Alberto Donzelli für translation
+
+Release 0.31 - 2010-09-07
+
+* fixed datetime format in NL.php
+* fixed deprecated functions in class.parser.php
+
+Release 0.30 - 2010-04-02
+
+* fixed XSS security patch
+
+Release 0.29 - 2008-05-02
+
+* added NL.php, many thanks to Ad Kalle for translation
+
+Release 0.28 - 2008-03-30
+
+* fixed problem detecting if user is authenticated
+
+Release 0.27 - 2008-03-30
+
+* fixed WB 2.7: extended captcha don't show calculation operator
+* added option to check comments before publishing
+* added help function for backend
+
+Release 0.26 - 2008-03-08
+
+* fixed date/time string EN.php
+* changed moved email body from template to language file
+* fixed backend don't show actual email address after changing
+
+Release 0.25 - 2008-02-29
+
+added extended captcha support for WB 2.7.x
+
+Release 0.24 - 2008-02-28
+
+* fixed security lack enables Cross Site Scripting
+
+Release 0.23 - 2008-02-23
+
+* fixed call undefined $_REQUEST['fb_action']
+ 
+Release 0.22 - 2008-02-19
+
+* added EN.php
+* fixed checking if class.parser.php is already loaded
+ 
+Release 0.21 - 2008-01-22
+
+* added searching feature
+
+Release 0.10 - 2007
+
+* initial release

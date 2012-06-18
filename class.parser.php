@@ -1,4 +1,5 @@
 <?php
+
 /**
 * Simple TemplateParser Class
 *
@@ -67,7 +68,7 @@ class templateParser
    }
 
   function encodeSpecialChars(&$value) {
-  	$value = str_replace("ä","&auml;",$value); 
+  	$value = str_replace("ä","&auml;",$value);
   	$value = str_replace("Ä","&Auml;",$value);
   	$value = str_replace("ö","&ouml;",$value);
   	$value = str_replace("Ö","&Ouml;",$value);

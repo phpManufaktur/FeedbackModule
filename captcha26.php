@@ -1,19 +1,17 @@
 <?php
 
-/*
-
-Captcha generator
-
-This file generates a captcha image.
-Credits to http://php.webmaster-kit.com/ for the original code.
-
-*/
+/**
+ * FeedbackModule
+ *
+ * @author Ralf Hertsch <ralf.hertsch@phpmanufaktur.de>
+ * @link http://phpmanufaktur.de
+ * @copyright 2007 - 2012
+ * @license MIT License (MIT) http://www.opensource.org/licenses/MIT
+ */
 
 require_once("../../config.php");
 
-//error_reporting(E_STRICT);
-
-if(extension_loaded('gd') AND function_exists('imageCreateFromJpeg') AND isset($_SESSION['captcha'])) {
+if (extension_loaded('gd') AND function_exists('imageCreateFromJpeg') AND isset($_SESSION['captcha'])) {
 
 	$image = imagecreate(120, 30);
 

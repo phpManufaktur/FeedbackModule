@@ -1,23 +1,34 @@
 <?php
 
 /**
-  Module developed for the Open Source Content Management System Website Baker (http://websitebaker.org)
-  Copyright (c) 2008, Ralf Hertsch
-  Contact me: hertsch(at)berlin.de, http://ralf-hertsch.de
+ * FeedbackModule
+ *
+ * @author Ralf Hertsch <ralf.hertsch@phpmanufaktur.de>
+ * @link http://phpmanufaktur.de
+ * @copyright 2007 - 2012
+ * @license MIT License (MIT) http://www.opensource.org/licenses/MIT
+ */
 
-  This module is free software. You can redistribute it and/or modify it
-  under the terms of the GNU General Public License  - version 2 or later,
-  as published by the Free Software Foundation: http://www.gnu.org/licenses/gpl.html.
-
-  This module is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
-**/
-/** Traducción al español: Galynet 
-**/
-// Modulbeschreibung f&uuml;r Backend (WB 2.7)
-//$module_description                           = "Erlaubt Besuchern das kommentieren von Seiten, direkt vom Frontend aus.";
+// include class.secure.php to protect this file and the whole CMS!
+if (defined('WB_PATH')) {
+  if (defined('LEPTON_VERSION')) include (WB_PATH . '/framework/class.secure.php');
+}
+else {
+  $oneback = "../";
+  $root = $oneback;
+  $level = 1;
+  while (($level < 10) && (!file_exists($root . '/framework/class.secure.php'))) {
+    $root .= $oneback;
+    $level += 1;
+  }
+  if (file_exists($root . '/framework/class.secure.php')) {
+    include ($root . '/framework/class.secure.php');
+  }
+  else {
+    trigger_error(sprintf("[ <b>%s</b> ] Can't include class.secure.php!", $_SERVER['SCRIPT_NAME']), E_USER_ERROR);
+  }
+}
+// end include class.secure.php
 
 define('fb_not_implemented',									'<p><strong>Funci&oacute;n no implementada.</strong></p>');
 
@@ -63,7 +74,7 @@ define('fb_backend_success_update',						'El comentario [<strong>%05d</strong>] 
 define('fb_backend_success_upgrade',          'Actualizaci&oacute;n del m&oacute;dulo feedback con &eacute;xito.');
 
 define('fb_frontend_comment_header',					'<a href="mailto:%s">%s</a> escrito el %s:');
-define('fb_frontend_header',									'Nos gustaría conocer tu opini&oacute;n.');
+define('fb_frontend_header',									'Nos gustarï¿½a conocer tu opini&oacute;n.');
 define('fb_frontend_intro',										'Por favor, exp&oacute;nganos  <strong>%s</strong> <a href="%s">su opini&oacute;n</a>.');
 
 define('fb_captcha_explain',									'Protecci&oacute;n Spam: Por favor, introduzca los caracteres de la imagen:');
@@ -73,7 +84,7 @@ define('fb_feedback_added',										'Gracias por su comentario!');
 define('fb_feedback_datetime',								'j F, Y - h:i A');
 define('fb_feedback_item_sender',							'<strong>%s</strong> escrito el %s:');
 define('fb_feedback_not_published_immediately','Gracias por su comentario, tras ser comprobado por el personal editor su comentario ser&aacute; publicado. Le informaremos por e-mail de su publicaci&oacute;n.');
-define('fb_feedback_published_ok',						'El comentario será desbloqueado y el autor recibir&aacute; un e-mail pinformativo acerca de la publicaci&oacute;n');
+define('fb_feedback_published_ok',						'El comentario serï¿½ desbloqueado y el autor recibir&aacute; un e-mail pinformativo acerca de la publicaci&oacute;n');
 define('fb_feedback_published_no_mail',				'El comentario fue desbloqueado, pero el sistema no puede enviar un e-mail al autor para informarle acerca de la publicaci&oacute;n.');
 
 define('fb_mail_subject',											'[Feedback] %s');
@@ -107,11 +118,11 @@ define('templatePath',                        WB_PATH.'/modules/feedback/htt/');
 /**
  * Las siguientes constantes se utilizan como VALORES POR DEFECTO en nuevas secciones
  */
-// Mostrar comentarios más recientes primero 1=true 0=false
+// Mostrar comentarios mï¿½s recientes primero 1=true 0=false
 define('fb_cfg_latest_first',                 1);
-// Enviar E-Mail a esta dirección si tenemos nuevo comentario
+// Enviar E-Mail a esta direcciï¿½n si tenemos nuevo comentario
 define('fb_cfg_info_email',                   '');
-// Permitir la edición de Opiniones en Backend 1=true 0=false
+// Permitir la ediciï¿½n de Opiniones en Backend 1=true 0=false
 define('fb_cfg_edit_feedbacks',               1);
 // Publicar nuevos comentarios inmediatamente 1=true 0=false
 define('fb_cfg_publish_immediately',					1);
